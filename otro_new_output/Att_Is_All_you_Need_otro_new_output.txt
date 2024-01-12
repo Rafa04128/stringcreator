@@ -1,0 +1,1890 @@
+Text: Provided proper attribution is provided, Google hereby grants permission to, Font: NimbusRomNo9L-Regu, Size: 11.9552001953125
+Text: reproduce the tables and figures in this paper solely for use in journalistic or, Font: NimbusRomNo9L-Regu, Size: 11.9552001953125
+Text: scholarly works., Font: NimbusRomNo9L-Regu, Size: 11.9552001953125
+Text: Attention Is All You Need, Font: NimbusRomNo9L-Medi, Size: 17.21540069580078
+Text: Ashish Vaswani, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗, Font: CMSY7, Size: 6.973800182342529
+Text: Google Brain, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: avaswani@google.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Noam Shazeer, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗, Font: CMSY7, Size: 6.973800182342529
+Text: Google Brain, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: noam@google.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Niki Parmar, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗, Font: CMSY7, Size: 6.973800182342529
+Text: Google Research, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: nikip@google.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Jakob Uszkoreit, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗, Font: CMSY7, Size: 6.973800182342529
+Text: Google Research, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: usz@google.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Llion Jones, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗, Font: CMSY7, Size: 6.973800182342529
+Text: Google Research, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: llion@google.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Aidan N. Gomez, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗ †, Font: CMSY7, Size: 6.973800182342529
+Text: University of Toronto, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: aidan@cs.toronto.edu, Font: SFTT1000, Size: 9.962599754333496
+Text: Łukasz Kaiser, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗, Font: CMSY7, Size: 6.973800182342529
+Text: Google Brain, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: lukaszkaiser@google.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Illia Polosukhin, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: ∗ ‡, Font: CMSY7, Size: 6.973800182342529
+Text: illia.polosukhin@gmail.com, Font: SFTT1000, Size: 9.962599754333496
+Text: Abstract, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: The dominant sequence transduction models are based on complex recurrent or, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: convolutional neural networks that include an encoder and a decoder. The best, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: performing models also connect the encoder and decoder through an attention, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: mechanism. We propose a new simple network architecture, the Transformer,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: based solely on attention mechanisms, dispensing with recurrence and convolutions, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: entirely. Experiments on two machine translation tasks show these models to, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: be superior in quality while being more parallelizable and requiring significantly, Font: NimbusRomNo9L-Regu, Size: 10.022196769714355
+Text: less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: to-German translation task, improving over the existing best results, including, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: our model establishes a new single-model state-of-the-art BLEU score of 41.8 after, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: training for 3.5 days on eight GPUs, a small fraction of the training costs of the, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: best models from the literature. We show that the Transformer generalizes well to, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text: other tasks by applying it successfully to English constituency parsing both with, Font: NimbusRomNo9L-Regu, Size: 10.037040710449219
+Text: large and limited training data., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ∗, Font: CMSY6, Size: 5.97760009765625
+Text: Equal contribution. Listing order is random. Jakob proposed replacing RNNs with self-attention and started, Font: NimbusRomNo9L-Regu, Size: 8.880810737609863
+Text: the effort to evaluate this idea. Ashish, with Illia, designed and implemented the first Transformer models and, Font: NimbusRomNo9L-Regu, Size: 9.00219440460205
+Text: has been crucially involved in every aspect of this work. Noam proposed scaled dot-product attention, multi-head, Font: NimbusRomNo9L-Regu, Size: 8.876283645629883
+Text: attention and the parameter-free position representation and became the other person involved in nearly every, Font: NimbusRomNo9L-Regu, Size: 9.015580177307129
+Text: detail. Niki designed, implemented, tuned and evaluated countless model variants in our original codebase and, Font: NimbusRomNo9L-Regu, Size: 8.957428932189941
+Text: tensor2tensor. Llion also experimented with novel model variants, was responsible for our initial codebase, and, Font: NimbusRomNo9L-Regu, Size: 8.930462837219238
+Text: efficient inference and visualizations. Lukasz and Aidan spent countless long days designing various parts of and, Font: NimbusRomNo9L-Regu, Size: 8.876283645629883
+Text: implementing tensor2tensor, replacing our earlier codebase, greatly improving results and massively accelerating, Font: NimbusRomNo9L-Regu, Size: 8.876283645629883
+Text: our research., Font: NimbusRomNo9L-Regu, Size: 8.966400146484375
+Text: †, Font: CMSY6, Size: 5.97760009765625
+Text: Work performed while at Google Brain., Font: NimbusRomNo9L-Regu, Size: 8.966400146484375
+Text: ‡, Font: CMSY6, Size: 5.97760009765625
+Text: Work performed while at Google Research., Font: NimbusRomNo9L-Regu, Size: 8.966400146484375
+Text: 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA., Font: NimbusRomNo9L-Regu, Size: 8.966400146484375
+Text: arXiv:1706.03762v7  [cs.CL]  2 Aug 2023, Font: Times-Roman, Size: 20.0
+Text: 1, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Introduction, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Recurrent neural networks, long short-term memory [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 13, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] and gated recurrent [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] neural networks, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: in particular, have been firmly established as state of the art approaches in sequence modeling and, Font: NimbusRomNo9L-Regu, Size: 10.046924591064453
+Text: transduction problems such as language modeling and machine translation [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 35, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. Numerous, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: efforts have since continued to push the boundaries of recurrent language models and encoder-decoder, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: architectures [38, 24, 15]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Recurrent models typically factor computation along the symbol positions of the input and output, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sequences. Aligning the positions to steps in computation time, they generate a sequence of hidden, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: states, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text:  h, Font: CMMI10, Size: 9.962599754333496
+Text: t, Font: CMMI7, Size: 6.973800182342529
+Text: , as a function of the previous hidden state, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text:  h, Font: CMMI10, Size: 9.962599754333496
+Text: t, Font: CMMI7, Size: 6.973800182342529
+Text: −, Font: CMSY7, Size: 6.973800182342529
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text:  and the input for position, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text:  t, Font: CMMI10, Size: 9.962599754333496
+Text: . This inherently, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text: sequential nature precludes parallelization within training examples, which becomes critical at longer, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: sequence lengths, as memory constraints limit batching across examples. Recent work has achieved, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: significant improvements in computational efficiency through factorization tricks [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 21, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] and conditional, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: computation [, Font: NimbusRomNo9L-Regu, Size: 10.051863670349121
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], while also improving model performance in case of the latter. The fundamental, Font: NimbusRomNo9L-Regu, Size: 10.051863670349121
+Text: constraint of sequential computation, however, remains., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Attention mechanisms have become an integral part of compelling sequence modeling and transduc-, Font: NimbusRomNo9L-Regu, Size: 9.932666778564453
+Text: tion models in various tasks, allowing modeling of dependencies without regard to their distance in, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: the input or output sequences [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  19, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. In all but a few cases [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 27, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], however, such attention mechanisms, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: are used in conjunction with a recurrent network., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In this work we propose the Transformer, a model architecture eschewing recurrence and instead, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: relying entirely on an attention mechanism to draw global dependencies between input and output., Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text: The Transformer allows for significantly more parallelization and can reach a new state of the art in, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: translation quality after being trained for as little as twelve hours on eight P100 GPUs., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 2, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Background, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: The goal of reducing sequential computation also forms the foundation of the Extended Neural GPU, Font: NimbusRomNo9L-Regu, Size: 9.902643203735352
+Text: [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], ByteNet [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 18, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] and ConvS2S [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 9, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], all of which use convolutional neural networks as basic building, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: block, computing hidden representations in parallel for all input and output positions. In these models,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: the number of operations required to relate signals from two arbitrary input or output positions grows, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: in the distance between positions, linearly for ConvS2S and logarithmically for ByteNet. This makes, Font: NimbusRomNo9L-Regu, Size: 9.877554893493652
+Text: it more difficult to learn dependencies between distant positions [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 12, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. In the Transformer this is, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: reduced to a constant number of operations, albeit at the cost of reduced effective resolution due, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: to averaging attention-weighted positions, an effect we counteract with Multi-Head Attention as, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: described in section 3.2., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Self-attention, sometimes called intra-attention is an attention mechanism relating different positions, Font: NimbusRomNo9L-Regu, Size: 9.89261531829834
+Text: of a single sequence in order to compute a representation of the sequence. Self-attention has been, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: used successfully in a variety of tasks including reading comprehension, abstractive summarization,, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: textual entailment and learning task-independent sentence representations [4, 27, 28, 22]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: End-to-end memory networks are based on a recurrent attention mechanism instead of sequence-, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: aligned recurrence and have been shown to perform well on simple-language question answering and, Font: NimbusRomNo9L-Regu, Size: 9.867501258850098
+Text: language modeling tasks [34]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: To the best of our knowledge, however, the Transformer is the first transduction model relying, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: entirely on self-attention to compute representations of its input and output without using sequence-, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: aligned RNNs or convolution. In the following sections, we will describe the Transformer, motivate, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: self-attention and discuss its advantages over models such as [17, 18] and [9]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Model Architecture, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Most competitive neural sequence transduction models have an encoder-decoder structure [, Font: NimbusRomNo9L-Regu, Size: 9.937662124633789
+Text: 5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.937662124633789
+Text:  2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.937662124633789
+Text:  35, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]., Font: NimbusRomNo9L-Regu, Size: 9.937662124633789
+Text: Here, the encoder maps an input sequence of symbol representations, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  (, Font: CMR10, Size: 9.962599754333496
+Text: x, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: , ..., x, Font: CMMI10, Size: 9.962599754333496
+Text: n, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text:  to a sequence, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: of continuous representations, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  z, Font: CMBX10, Size: 9.962599754333496
+Text:  = (, Font: CMR10, Size: 9.962599754333496
+Text: z, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: , ..., z, Font: CMMI10, Size: 9.962599754333496
+Text: n, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: . Given, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  z, Font: CMBX10, Size: 9.962599754333496
+Text: , the decoder then generates an output, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sequence, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  (, Font: CMR10, Size: 9.962599754333496
+Text: y, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: , ..., y, Font: CMMI10, Size: 9.962599754333496
+Text: m, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text:  of symbols one element at a time. At each step the model is auto-regressive, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: [10], consuming the previously generated symbols as additional input when generating the next., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Figure 1: The Transformer - model architecture., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: The Transformer follows this overall architecture using stacked self-attention and point-wise, fully, Font: NimbusRomNo9L-Regu, Size: 10.022196769714355
+Text: connected layers for both the encoder and decoder, shown in the left and right halves of Figure 1,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: respectively., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.1, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Encoder and Decoder Stacks, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Encoder:, Font: NimbusRomNo9L-Medi, Size: 10.061732292175293
+Text: The encoder is composed of a stack of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  N, Font: CMMI10, Size: 9.962599754333496
+Text:  = 6, Font: CMR10, Size: 9.962599754333496
+Text:  identical layers. Each layer has two, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, position-, Font: NimbusRomNo9L-Regu, Size: 10.007330894470215
+Text: wise fully connected feed-forward network. We employ a residual connection [, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: 11, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] around each of, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: the two sub-layers, followed by layer normalization [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. That is, the output of each sub-layer is, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: LayerNorm(, Font: CMR10, Size: 9.962599754333496
+Text: x, Font: CMMI10, Size: 9.962599754333496
+Text:  + Sublayer(, Font: CMR10, Size: 9.962599754333496
+Text: x, Font: CMMI10, Size: 9.962599754333496
+Text: )), Font: CMR10, Size: 9.962599754333496
+Text: , where, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  Sublayer(, Font: CMR10, Size: 9.962599754333496
+Text: x, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text:  is the function implemented by the sub-layer, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: layers, produce outputs of dimension, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text:  = 512, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Decoder:, Font: NimbusRomNo9L-Medi, Size: 9.862470626831055
+Text: The decoder is also composed of a stack of, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  N, Font: CMMI10, Size: 9.962599754333496
+Text:  = 6, Font: CMR10, Size: 9.962599754333496
+Text:  identical layers. In addition to the two, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: attention over the output of the encoder stack. Similar to the encoder, we employ residual connections, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: around each of the sub-layers, followed by layer normalization. We also modify the self-attention, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sub-layer in the decoder stack to prevent positions from attending to subsequent positions. This, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: masking, combined with fact that the output embeddings are offset by one position, ensures that the, Font: NimbusRomNo9L-Regu, Size: 9.952631950378418
+Text: predictions for position, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  i, Font: CMMI10, Size: 9.962599754333496
+Text:  can depend only on the known outputs at positions less than, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  i, Font: CMMI10, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.2, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Attention, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: An attention function can be described as mapping a query and a set of key-value pairs to an output,, Font: NimbusRomNo9L-Regu, Size: 9.952631950378418
+Text: where the query, keys, values, and output are all vectors. The output is computed as a weighted sum, Font: NimbusRomNo9L-Regu, Size: 9.937662124633789
+Text: 3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Scaled Dot-Product Attention, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Multi-Head Attention, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Figure 2: (left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: attention layers running in parallel., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: of the values, where the weight assigned to each value is computed by a compatibility function of the, Font: NimbusRomNo9L-Regu, Size: 9.867501258850098
+Text: query with the corresponding key., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.2.1, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Scaled Dot-Product Attention, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: We call our particular attention "Scaled Dot-Product Attention" (Figure 2). The input consists of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: queries and keys of dimension, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: , and values of dimension, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: v, Font: CMMI7, Size: 6.973800182342529
+Text: . We compute the dot products of the, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text: query with all keys, divide each by, Font: NimbusRomNo9L-Regu, Size: 9.997407913208008
+Text:  , Font: CMSY10, Size: 9.962599754333496
+Text: √, Font: CMSY10, Size: 9.962599754333496
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: , and apply a softmax function to obtain the weights on the, Font: NimbusRomNo9L-Regu, Size: 9.997407913208008
+Text: values., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In practice, we compute the attention function on a set of queries simultaneously, packed together, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: into a matrix, Font: NimbusRomNo9L-Regu, Size: 9.977532386779785
+Text:  Q, Font: CMMI10, Size: 9.962599754333496
+Text: . The keys and values are also packed together into matrices, Font: NimbusRomNo9L-Regu, Size: 9.977532386779785
+Text:  K, Font: CMMI10, Size: 9.962599754333496
+Text:  and, Font: NimbusRomNo9L-Regu, Size: 9.977532386779785
+Text:  V, Font: CMMI10, Size: 9.962599754333496
+Text:  . We compute, Font: NimbusRomNo9L-Regu, Size: 9.977532386779785
+Text: the matrix of outputs as:, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Attention(, Font: CMR10, Size: 9.962599754333496
+Text: Q, K, V, Font: CMMI10, Size: 9.962599754333496
+Text:  ) = softmax(, Font: CMR10, Size: 9.962599754333496
+Text: QK, Font: CMMI10, Size: 9.962599754333496
+Text: T, Font: CMMI7, Size: 6.973800182342529
+Text: √, Font: CMSY10, Size: 9.962599754333496
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: V, Font: CMMI10, Size: 9.962599754333496
+Text: (1), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: The two most commonly used attention functions are additive attention [, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: 2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], and dot-product (multi-, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: plicative) attention. Dot-product attention is identical to our algorithm, except for the scaling factor, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text: of, Font: NimbusRomNo9L-Regu, Size: 10.007330894470215
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: √, Font: CMSY7, Size: 6.973800182342529
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: k, Font: CMMI5, Size: 4.981299877166748
+Text:  . Additive attention computes the compatibility function using a feed-forward network with, Font: NimbusRomNo9L-Regu, Size: 10.007330894470215
+Text: a single hidden layer. While the two are similar in theoretical complexity, dot-product attention is, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: much faster and more space-efficient in practice, since it can be implemented using highly optimized, Font: NimbusRomNo9L-Regu, Size: 9.887598037719727
+Text: matrix multiplication code., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: While for small values of, Font: NimbusRomNo9L-Regu, Size: 9.992443084716797
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text:  the two mechanisms perform similarly, additive attention outperforms, Font: NimbusRomNo9L-Regu, Size: 9.992443084716797
+Text: dot product attention without scaling for larger values of, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text:  [, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: 3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. We suspect that for large values of, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: , the dot products grow large in magnitude, pushing the softmax function into regions where it has, Font: NimbusRomNo9L-Regu, Size: 9.89261531829834
+Text: extremely small gradients, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  , Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: 4, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: . To counteract this effect, we scale the dot products by, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: √, Font: CMSY7, Size: 6.973800182342529
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: k, Font: CMMI5, Size: 4.981299877166748
+Text:  ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.2.2, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Multi-Head Attention, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Instead of performing a single attention function with, Font: NimbusRomNo9L-Regu, Size: 10.037040710449219
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: -dimensional keys, values and queries,, Font: NimbusRomNo9L-Regu, Size: 10.037040710449219
+Text: we found it beneficial to linearly project the queries, keys and values, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text:  h, Font: CMMI10, Size: 9.962599754333496
+Text:  times with different, learned, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: linear projections to, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text:  and, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: v, Font: CMMI7, Size: 6.973800182342529
+Text:  dimensions, respectively. On each of these projected versions of, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: queries, keys and values we then perform the attention function in parallel, yielding, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: v, Font: CMMI7, Size: 6.973800182342529
+Text: -dimensional, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: 4, Font: NimbusRomNo9L-Regu, Size: 5.97760009765625
+Text: To illustrate why the dot products get large, assume that the components of, Font: NimbusRomNo9L-Regu, Size: 8.876283645629883
+Text:  q, Font: CMMI9, Size: 8.966400146484375
+Text:  and, Font: NimbusRomNo9L-Regu, Size: 8.876283645629883
+Text:  k, Font: CMMI9, Size: 8.966400146484375
+Text:  are independent random, Font: NimbusRomNo9L-Regu, Size: 8.876283645629883
+Text: variables with mean, Font: NimbusRomNo9L-Regu, Size: 8.952940940856934
+Text:  0, Font: CMR9, Size: 8.966400146484375
+Text:  and variance, Font: NimbusRomNo9L-Regu, Size: 8.952940940856934
+Text:  1, Font: CMR9, Size: 8.966400146484375
+Text: . Then their dot product,, Font: NimbusRomNo9L-Regu, Size: 8.952940940856934
+Text:  q, Font: CMMI9, Size: 8.966400146484375
+Text:  ·, Font: CMSY9, Size: 8.966400146484375
+Text:  k, Font: CMMI9, Size: 8.966400146484375
+Text:  =, Font: CMR9, Size: 8.966400146484375
+Text:  , Font: CMEX9, Size: 8.966400146484375
+Text: P, Font: CMEX9, Size: 8.966400146484375
+Text: d, Font: CMMI6, Size: 5.97760009765625
+Text: k, Font: CMMI5, Size: 4.981299877166748
+Text: i, Font: CMMI6, Size: 5.97760009765625
+Text: =1, Font: CMR6, Size: 5.97760009765625
+Text:  , Font: CMMI9, Size: 8.966400146484375
+Text: q, Font: CMMI9, Size: 8.966400146484375
+Text: i, Font: CMMI6, Size: 5.97760009765625
+Text: k, Font: CMMI9, Size: 8.966400146484375
+Text: i, Font: CMMI6, Size: 5.97760009765625
+Text: , has mean, Font: NimbusRomNo9L-Regu, Size: 8.952940940856934
+Text:  0, Font: CMR9, Size: 8.966400146484375
+Text:  and variance, Font: NimbusRomNo9L-Regu, Size: 8.952940940856934
+Text:  d, Font: CMMI9, Size: 8.966400146484375
+Text: k, Font: CMMI6, Size: 5.97760009765625
+Text: ., Font: NimbusRomNo9L-Regu, Size: 8.952940940856934
+Text: 4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: output values. These are concatenated and once again projected, resulting in the final values, as, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: depicted in Figure 2., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Multi-head attention allows the model to jointly attend to information from different representation, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: subspaces at different positions. With a single attention head, averaging inhibits this., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: MultiHead(, Font: CMR10, Size: 9.962599754333496
+Text: Q, K, V, Font: CMMI10, Size: 9.962599754333496
+Text:  ) = Concat(head, Font: CMR10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: , ...,, Font: CMMI10, Size: 9.962599754333496
+Text:  head, Font: CMR10, Size: 9.962599754333496
+Text: h, Font: CMR7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: W, Font: CMMI10, Size: 9.962599754333496
+Text:  , Font: CMMI7, Size: 6.973800182342529
+Text: O, Font: CMMI7, Size: 6.973800182342529
+Text: where, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  head, Font: CMR10, Size: 9.962599754333496
+Text: i, Font: CMR7, Size: 6.973800182342529
+Text:  = Attention(, Font: CMR10, Size: 9.962599754333496
+Text: QW, Font: CMMI10, Size: 9.962599754333496
+Text:  , Font: CMMI7, Size: 6.973800182342529
+Text: Q, Font: CMMI7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text:  , Font: CMMI10, Size: 9.962599754333496
+Text: , KW, Font: CMMI10, Size: 9.962599754333496
+Text:  K, Font: CMMI7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text:  , Font: CMMI10, Size: 9.962599754333496
+Text: , V W, Font: CMMI10, Size: 9.962599754333496
+Text:  V, Font: CMMI7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text:  , Font: CMR10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: Where the projections are parameter matrices, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  W, Font: CMMI10, Size: 9.962599754333496
+Text:  , Font: CMMI7, Size: 6.973800182342529
+Text: Q, Font: CMMI7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text: ∈, Font: CMSY10, Size: 9.962599754333496
+Text:  R, Font: MSBM10, Size: 9.962599754333496
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 4.981299877166748
+Text: ×, Font: CMSY7, Size: 6.973800182342529
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: k, Font: CMMI5, Size: 4.981299877166748
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  W, Font: CMMI10, Size: 9.962599754333496
+Text:  , Font: CMMI7, Size: 6.973800182342529
+Text: K, Font: CMMI7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text: ∈, Font: CMSY10, Size: 9.962599754333496
+Text:  R, Font: MSBM10, Size: 9.962599754333496
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 4.981299877166748
+Text: ×, Font: CMSY7, Size: 6.973800182342529
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: k, Font: CMMI5, Size: 4.981299877166748
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  W, Font: CMMI10, Size: 9.962599754333496
+Text:  , Font: CMMI7, Size: 6.973800182342529
+Text: V, Font: CMMI7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text: ∈, Font: CMSY10, Size: 9.962599754333496
+Text:  R, Font: MSBM10, Size: 9.962599754333496
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 4.981299877166748
+Text: ×, Font: CMSY7, Size: 6.973800182342529
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: v, Font: CMMI5, Size: 4.981299877166748
+Text: and, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  W, Font: CMMI10, Size: 9.962599754333496
+Text:  , Font: CMMI7, Size: 6.973800182342529
+Text: O, Font: CMMI7, Size: 6.973800182342529
+Text:  , Font: CMSY10, Size: 9.962599754333496
+Text: ∈, Font: CMSY10, Size: 9.962599754333496
+Text:  R, Font: MSBM10, Size: 9.962599754333496
+Text: hd, Font: CMMI7, Size: 6.973800182342529
+Text: v, Font: CMMI5, Size: 4.981299877166748
+Text: ×, Font: CMSY7, Size: 6.973800182342529
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 4.981299877166748
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In this work we employ, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  h, Font: CMMI10, Size: 9.962599754333496
+Text:  = 8, Font: CMR10, Size: 9.962599754333496
+Text:  parallel attention layers, or heads. For each of these we use, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text:  =, Font: CMR10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: v, Font: CMMI7, Size: 6.973800182342529
+Text:  =, Font: CMR10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: /h, Font: CMMI10, Size: 9.962599754333496
+Text:  = 64, Font: CMR10, Size: 9.962599754333496
+Text: . Due to the reduced dimension of each head, the total computational cost, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text: is similar to that of single-head attention with full dimensionality., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.2.3, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Applications of Attention in our Model, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: The Transformer uses multi-head attention in three different ways:, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: •, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  In "encoder-decoder attention" layers, the queries come from the previous decoder layer,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: and the memory keys and values come from the output of the encoder. This allows every, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: position in the decoder to attend over all positions in the input sequence. This mimics the, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text: typical encoder-decoder attention mechanisms in sequence-to-sequence models such as, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: [38, 2, 9]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: •, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  The encoder contains self-attention layers. In a self-attention layer all of the keys, values, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: and queries come from the same place, in this case, the output of the previous layer in the, Font: NimbusRomNo9L-Regu, Size: 10.022196769714355
+Text: encoder. Each position in the encoder can attend to all positions in the previous layer of the, Font: NimbusRomNo9L-Regu, Size: 9.90765380859375
+Text: encoder., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: •, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Similarly, self-attention layers in the decoder allow each position in the decoder to attend to, Font: NimbusRomNo9L-Regu, Size: 9.887598037719727
+Text: all positions in the decoder up to and including that position. We need to prevent leftward, Font: NimbusRomNo9L-Regu, Size: 10.012289047241211
+Text: information flow in the decoder to preserve the auto-regressive property. We implement this, Font: NimbusRomNo9L-Regu, Size: 9.877554893493652
+Text: inside of scaled dot-product attention by masking out (setting to, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  −∞, Font: CMSY10, Size: 9.962599754333496
+Text: ) all values in the input, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: of the softmax which correspond to illegal connections. See Figure 2., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.3, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Position-wise Feed-Forward Networks, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: connected feed-forward network, which is applied to each position separately and identically. This, Font: NimbusRomNo9L-Regu, Size: 10.007330894470215
+Text: consists of two linear transformations with a ReLU activation in between., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: FFN(, Font: CMR10, Size: 9.962599754333496
+Text: x, Font: CMMI10, Size: 9.962599754333496
+Text: ) = max(0, Font: CMR10, Size: 9.962599754333496
+Text: , xW, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text:  +, Font: CMR10, Size: 9.962599754333496
+Text:  b, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: W, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text:  +, Font: CMR10, Size: 9.962599754333496
+Text:  b, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: (2), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: While the linear transformations are the same across different positions, they use different parameters, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: from layer to layer. Another way of describing this is as two convolutions with kernel size 1., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: The dimensionality of input and output is, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text:  = 512, Font: CMR10, Size: 9.962599754333496
+Text: , and the inner-layer has dimensionality, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: ff, Font: CMMI7, Size: 6.973800182342529
+Text:  = 2048, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3.4, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Embeddings and Softmax, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Similarly to other sequence transduction models, we use learned embeddings to convert the input, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: tokens and output tokens to vectors of dimension, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: . We also use the usual learned linear transfor-, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: mation and softmax function to convert the decoder output to predicted next-token probabilities. In, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: our model, we share the same weight matrix between the two embedding layers and the pre-softmax, Font: NimbusRomNo9L-Regu, Size: 9.9176664352417
+Text: linear transformation, similar to [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 30, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. In the embedding layers, we multiply those weights by, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  , Font: CMSY10, Size: 9.962599754333496
+Text: √, Font: CMSY10, Size: 9.962599754333496
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Table 1: Maximum path lengths, per-layer complexity and minimum number of sequential operations, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: for different layer types., Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text:  is the sequence length,, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text:  is the representation dimension,, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text:  k, Font: CMMI10, Size: 9.962599754333496
+Text:  is the kernel, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: size of convolutions and, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  r, Font: CMMI10, Size: 9.962599754333496
+Text:  the size of the neighborhood in restricted self-attention., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Layer Type, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Complexity per Layer, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Sequential, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Maximum Path Length, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Operations, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Self-Attention, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text:  , Font: CMSY10, Size: 9.962599754333496
+Text: ·, Font: CMSY10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (1), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (1), Font: CMR10, Size: 9.962599754333496
+Text: Recurrent, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: Convolutional, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: k, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (1), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: log, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text: )), Font: CMR10, Size: 9.962599754333496
+Text: Self-Attention (restricted), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: r, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (1), Font: CMR10, Size: 9.962599754333496
+Text: O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n/r, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: 3.5, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Positional Encoding, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Since our model contains no recurrence and no convolution, in order for the model to make use of the, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: order of the sequence, we must inject some information about the relative or absolute position of the, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text: tokens in the sequence. To this end, we add "positional encodings" to the input embeddings at the, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: bottoms of the encoder and decoder stacks. The positional encodings have the same dimension, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: as the embeddings, so that the two can be summed. There are many choices of positional encodings,, Font: NimbusRomNo9L-Regu, Size: 9.927669525146484
+Text: learned and fixed [9]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In this work, we use sine and cosine functions of different frequencies:, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: PE, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR7, Size: 6.973800182342529
+Text: pos,, Font: CMMI7, Size: 6.973800182342529
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR7, Size: 6.973800182342529
+Text:  =, Font: CMR10, Size: 9.962599754333496
+Text:  sin, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: pos/, Font: CMMI10, Size: 9.962599754333496
+Text: 10000, Font: CMR10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: i/d, Font: CMMI7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 4.981299877166748
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: PE, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR7, Size: 6.973800182342529
+Text: pos,, Font: CMMI7, Size: 6.973800182342529
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text: +1), Font: CMR7, Size: 6.973800182342529
+Text:  =, Font: CMR10, Size: 9.962599754333496
+Text:  cos, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: pos/, Font: CMMI10, Size: 9.962599754333496
+Text: 10000, Font: CMR10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: i/d, Font: CMMI7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 4.981299877166748
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: where, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text:  pos, Font: CMMI10, Size: 9.962599754333496
+Text:  is the position and, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text:  i, Font: CMMI10, Size: 9.962599754333496
+Text:  is the dimension. That is, each dimension of the positional encoding, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: corresponds to a sinusoid. The wavelengths form a geometric progression from, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  2, Font: CMR10, Size: 9.962599754333496
+Text: π, Font: CMMI10, Size: 9.962599754333496
+Text:  to, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  10000, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  2, Font: CMR10, Size: 9.962599754333496
+Text: π, Font: CMMI10, Size: 9.962599754333496
+Text: . We, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: chose this function because we hypothesized it would allow the model to easily learn to attend by, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: relative positions, since for any fixed offset, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  k, Font: CMMI10, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  PE, Font: CMMI10, Size: 9.962599754333496
+Text: pos, Font: CMMI7, Size: 6.973800182342529
+Text: +, Font: CMR7, Size: 6.973800182342529
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text:  can be represented as a linear function of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: PE, Font: CMMI10, Size: 9.962599754333496
+Text: pos, Font: CMMI7, Size: 6.973800182342529
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: We also experimented with using learned positional embeddings [, Font: NimbusRomNo9L-Regu, Size: 9.96757984161377
+Text: 9, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] instead, and found that the two, Font: NimbusRomNo9L-Regu, Size: 9.96757984161377
+Text: versions produced nearly identical results (see Table 3 row (E)). We chose the sinusoidal version, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: because it may allow the model to extrapolate to sequence lengths longer than the ones encountered, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: during training., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Why Self-Attention, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: In this section we compare various aspects of self-attention layers to the recurrent and convolu-, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: tional layers commonly used for mapping one variable-length sequence of symbol representations, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: x, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: , ..., x, Font: CMMI10, Size: 9.962599754333496
+Text: n, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text:  to another sequence of equal length, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  (, Font: CMR10, Size: 9.962599754333496
+Text: z, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: , ..., z, Font: CMMI10, Size: 9.962599754333496
+Text: n, Font: CMMI7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: , with, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  x, Font: CMMI10, Size: 9.962599754333496
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text: , z, Font: CMMI10, Size: 9.962599754333496
+Text: i, Font: CMMI7, Size: 6.973800182342529
+Text:  ∈, Font: CMSY10, Size: 9.962599754333496
+Text:  R, Font: MSBM10, Size: 9.962599754333496
+Text: d, Font: CMMI7, Size: 6.973800182342529
+Text: , such as a hidden, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: layer in a typical sequence transduction encoder or decoder. Motivating our use of self-attention we, Font: NimbusRomNo9L-Regu, Size: 9.952631950378418
+Text: consider three desiderata., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: One is the total computational complexity per layer. Another is the amount of computation that can, Font: NimbusRomNo9L-Regu, Size: 9.96757984161377
+Text: be parallelized, as measured by the minimum number of sequential operations required., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: The third is the path length between long-range dependencies in the network. Learning long-range, Font: NimbusRomNo9L-Regu, Size: 10.017244338989258
+Text: dependencies is a key challenge in many sequence transduction tasks. One key factor affecting the, Font: NimbusRomNo9L-Regu, Size: 10.022196769714355
+Text: ability to learn such dependencies is the length of the paths forward and backward signals have to, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: traverse in the network. The shorter these paths between any combination of positions in the input, Font: NimbusRomNo9L-Regu, Size: 10.037040710449219
+Text: and output sequences, the easier it is to learn long-range dependencies [, Font: NimbusRomNo9L-Regu, Size: 9.9176664352417
+Text: 12, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. Hence we also compare, Font: NimbusRomNo9L-Regu, Size: 9.9176664352417
+Text: the maximum path length between any two input and output positions in networks composed of the, Font: NimbusRomNo9L-Regu, Size: 9.96757984161377
+Text: different layer types., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: As noted in Table 1, a self-attention layer connects all positions with a constant number of sequentially, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: executed operations, whereas a recurrent layer requires, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text:  sequential operations. In terms of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: computational complexity, self-attention layers are faster than recurrent layers when the sequence, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 6, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: length, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text:  is smaller than the representation dimensionality, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: , which is most often the case with, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sentence representations used by state-of-the-art models in machine translations, such as word-piece, Font: NimbusRomNo9L-Regu, Size: 9.9176664352417
+Text: [, Font: NimbusRomNo9L-Regu, Size: 9.992443084716797
+Text: 38, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] and byte-pair [, Font: NimbusRomNo9L-Regu, Size: 9.992443084716797
+Text: 31, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] representations. To improve computational performance for tasks involving, Font: NimbusRomNo9L-Regu, Size: 9.992443084716797
+Text: very long sequences, self-attention could be restricted to considering only a neighborhood of size, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  r, Font: CMMI10, Size: 9.962599754333496
+Text:  in, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: the input sequence centered around the respective output position. This would increase the maximum, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: path length to, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n/r, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: . We plan to investigate this approach further in future work., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: A single convolutional layer with kernel width, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text:  k < n, Font: CMMI10, Size: 9.962599754333496
+Text:  does not connect all pairs of input and output, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: positions. Doing so requires a stack of, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n/k, Font: CMMI10, Size: 9.962599754333496
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text:  convolutional layers in the case of contiguous kernels,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: or, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: log, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: n, Font: CMMI10, Size: 9.962599754333496
+Text: )), Font: CMR10, Size: 9.962599754333496
+Text:  in the case of dilated convolutions [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 18, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], increasing the length of the longest paths, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: between any two positions in the network. Convolutional layers are generally more expensive than, Font: NimbusRomNo9L-Regu, Size: 10.012289047241211
+Text: recurrent layers, by a factor of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  k, Font: CMMI10, Size: 9.962599754333496
+Text: . Separable convolutions [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 6, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], however, decrease the complexity, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: considerably, to, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  O, Font: CMMI10, Size: 9.962599754333496
+Text: (, Font: CMR10, Size: 9.962599754333496
+Text: k, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text:  +, Font: CMR10, Size: 9.962599754333496
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: . Even with, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  k, Font: CMMI10, Size: 9.962599754333496
+Text:  =, Font: CMR10, Size: 9.962599754333496
+Text:  n, Font: CMMI10, Size: 9.962599754333496
+Text: , however, the complexity of a separable, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: convolution is equal to the combination of a self-attention layer and a point-wise feed-forward layer,, Font: NimbusRomNo9L-Regu, Size: 9.927669525146484
+Text: the approach we take in our model., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: As side benefit, self-attention could yield more interpretable models. We inspect attention distributions, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: from our models and present and discuss examples in the appendix. Not only do individual attention, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text: heads clearly learn to perform different tasks, many appear to exhibit behavior related to the syntactic, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: and semantic structure of the sentences., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Training, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: This section describes the training regime for our models., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.1, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Training Data and Batching, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sentence pairs. Sentences were encoded using byte-pair encoding [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], which has a shared source-, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: target vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT, Font: NimbusRomNo9L-Regu, Size: 9.92266845703125
+Text: 2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: vocabulary [, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 38, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. Sentence pairs were batched together by approximate sequence length. Each training, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: batch contained a set of sentence pairs containing approximately 25000 source tokens and 25000, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: target tokens., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.2, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Hardware and Schedule, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: We trained our models on one machine with 8 NVIDIA P100 GPUs. For our base models using, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: the hyperparameters described throughout the paper, each training step took about 0.4 seconds. We, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: trained the base models for a total of 100,000 steps or 12 hours. For our big models,(described on the, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: bottom line of table 3), step time was 1.0 seconds. The big models were trained for 300,000 steps, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: (3.5 days)., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.3, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Optimizer, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: We used the Adam optimizer [, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: 20, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] with, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text:  β, Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 9, Font: CMR10, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text:  β, Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR7, Size: 6.973800182342529
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 98, Font: CMR10, Size: 9.962599754333496
+Text:  and, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text:  ϵ, Font: CMMI10, Size: 9.962599754333496
+Text:  = 10, Font: CMR10, Size: 9.962599754333496
+Text: −, Font: CMSY7, Size: 6.973800182342529
+Text: 9, Font: CMR7, Size: 6.973800182342529
+Text: . We varied the learning, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: rate over the course of training, according to the formula:, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: lrate, Font: CMMI10, Size: 9.962599754333496
+Text:  =, Font: CMR10, Size: 9.962599754333496
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: −, Font: CMSY7, Size: 6.973800182342529
+Text: 0, Font: CMR7, Size: 6.973800182342529
+Text: ., Font: CMMI7, Size: 6.973800182342529
+Text: 5, Font: CMR7, Size: 6.973800182342529
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text:  , Font: CMSY10, Size: 9.962599754333496
+Text: ·, Font: CMSY10, Size: 9.962599754333496
+Text:  min(, Font: CMR10, Size: 9.962599754333496
+Text: step, Font: CMMI10, Size: 9.962599754333496
+Text: _, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: num, Font: CMMI10, Size: 9.962599754333496
+Text: −, Font: CMSY7, Size: 6.973800182342529
+Text: 0, Font: CMR7, Size: 6.973800182342529
+Text: ., Font: CMMI7, Size: 6.973800182342529
+Text: 5, Font: CMR7, Size: 6.973800182342529
+Text: , step, Font: CMMI10, Size: 9.962599754333496
+Text: _, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: num, Font: CMMI10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  warmup, Font: CMMI10, Size: 9.962599754333496
+Text: _, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: steps, Font: CMMI10, Size: 9.962599754333496
+Text: −, Font: CMSY7, Size: 6.973800182342529
+Text: 1, Font: CMR7, Size: 6.973800182342529
+Text: ., Font: CMMI7, Size: 6.973800182342529
+Text: 5, Font: CMR7, Size: 6.973800182342529
+Text: ), Font: CMR10, Size: 9.962599754333496
+Text: (3), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: This corresponds to increasing the learning rate linearly for the first, Font: NimbusRomNo9L-Regu, Size: 10.017244338989258
+Text:  warmup, Font: CMMI10, Size: 9.962599754333496
+Text: _, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: steps, Font: CMMI10, Size: 9.962599754333496
+Text:  training steps,, Font: NimbusRomNo9L-Regu, Size: 10.017244338989258
+Text: and decreasing it thereafter proportionally to the inverse square root of the step number. We used, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: warmup, Font: CMMI10, Size: 9.962599754333496
+Text: _, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: steps, Font: CMMI10, Size: 9.962599754333496
+Text:  = 4000, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.4, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Regularization, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: We employ three types of regularization during training:, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Table 2: The Transformer achieves better BLEU scores than previous state-of-the-art models on the, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: English-to-German and English-to-French newstest2014 tests at a fraction of the training cost., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Model, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: BLEU, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Training Cost (FLOPs), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: EN-DE, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: EN-FR, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: EN-DE, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: EN-FR, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ByteNet [18], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 23.75, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Deep-Att + PosUnk [39], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 39.2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 0, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 20, Font: CMR7, Size: 6.973800182342529
+Text: GNMT + RL [38], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 24.6, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 39.92, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 2, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 3, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 19, Font: CMR7, Size: 6.973800182342529
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 4, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 20, Font: CMR7, Size: 6.973800182342529
+Text: ConvS2S [9], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 40.46, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 9, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 6, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 18, Font: CMR7, Size: 6.973800182342529
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 5, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 20, Font: CMR7, Size: 6.973800182342529
+Text: MoE [32], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 26.03, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 40.56, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 2, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 0, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 19, Font: CMR7, Size: 6.973800182342529
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 20, Font: CMR7, Size: 6.973800182342529
+Text: Deep-Att + PosUnk Ensemble [39], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 40.4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 8, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 0, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 20, Font: CMR7, Size: 6.973800182342529
+Text: GNMT + RL Ensemble [38], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 26.30, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 41.16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 8, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 20, Font: CMR7, Size: 6.973800182342529
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 21, Font: CMR7, Size: 6.973800182342529
+Text: ConvS2S Ensemble [9], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 26.36, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 41.29, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: 7, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 7, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 19, Font: CMR7, Size: 6.973800182342529
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 2, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 21, Font: CMR7, Size: 6.973800182342529
+Text: Transformer (base model), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 27.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 38.1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 3, Font: CMBX10, Size: 9.962599754333496
+Text: ., Font: CMMIB10, Size: 9.962599754333496
+Text: 3, Font: CMBX10, Size: 9.962599754333496
+Text:  ·, Font: CMBSY10, Size: 9.962599754333496
+Text:  10, Font: CMBX10, Size: 9.962599754333496
+Text: 18, Font: CMBX7, Size: 6.973800182342529
+Text: Transformer (big), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 28.4, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: 41.8, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: 2, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 3, Font: CMR10, Size: 9.962599754333496
+Text:  ·, Font: CMSY10, Size: 9.962599754333496
+Text:  10, Font: CMR10, Size: 9.962599754333496
+Text: 19, Font: CMR7, Size: 6.973800182342529
+Text: Residual Dropout, Font: NimbusRomNo9L-Medi, Size: 9.932666778564453
+Text: We apply dropout [, Font: NimbusRomNo9L-Regu, Size: 9.932666778564453
+Text: 33, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ] to the output of each sub-layer, before it is added to the, Font: NimbusRomNo9L-Regu, Size: 9.932666778564453
+Text: sub-layer input and normalized. In addition, we apply dropout to the sums of the embeddings and the, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: positional encodings in both the encoder and decoder stacks. For the base model, we use a rate of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: P, Font: CMMI10, Size: 9.962599754333496
+Text: drop, Font: CMMI7, Size: 6.973800182342529
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Label Smoothing, Font: NimbusRomNo9L-Medi, Size: 10.061732292175293
+Text: During training, we employed label smoothing of value, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  ϵ, Font: CMMI10, Size: 9.962599754333496
+Text: ls, Font: CMMI7, Size: 6.973800182342529
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text:  [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 36, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. This, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 6, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Results, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: 6.1, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Machine Translation, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big), Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: in Table 2) outperforms the best previously reported models (including ensembles) by more than, Font: NimbusRomNo9L-Regu, Size: 9.9126615524292
+Text:  2, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 0, Font: CMR10, Size: 9.962599754333496
+Text: BLEU, establishing a new state-of-the-art BLEU score of, Font: NimbusRomNo9L-Regu, Size: 10.051863670349121
+Text:  28, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 4, Font: CMR10, Size: 9.962599754333496
+Text: . The configuration of this model is, Font: NimbusRomNo9L-Regu, Size: 10.051863670349121
+Text: listed in the bottom line of Table 3. Training took, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text:  3, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 5, Font: CMR10, Size: 9.962599754333496
+Text:  days on, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text:  8, Font: CMR10, Size: 9.962599754333496
+Text:  P100 GPUs. Even our base model, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text: surpasses all previously published models and ensembles, at a fraction of the training cost of any of, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: the competitive models., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of, Font: NimbusRomNo9L-Regu, Size: 9.867501258850098
+Text:  41, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 0, Font: CMR10, Size: 9.962599754333496
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.867501258850098
+Text: outperforming all of the previously published single models, at less than, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text:  1, Font: CMR10, Size: 9.962599754333496
+Text: /, Font: CMMI10, Size: 9.962599754333496
+Text: 4, Font: CMR10, Size: 9.962599754333496
+Text:  the training cost of the, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text: previous state-of-the-art model. The Transformer (big) model trained for English-to-French used, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: dropout rate, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  P, Font: CMMI10, Size: 9.962599754333496
+Text: drop, Font: CMMI7, Size: 6.973800182342529
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 1, Font: CMR10, Size: 9.962599754333496
+Text: , instead of, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 3, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: For the base models, we used a single model obtained by averaging the last 5 checkpoints, which, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: used beam search with a beam size of, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  4, Font: CMR10, Size: 9.962599754333496
+Text:  and length penalty, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  α, Font: CMMI10, Size: 9.962599754333496
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 6, Font: CMR10, Size: 9.962599754333496
+Text:  [, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 38, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. These hyperparameters, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: were chosen after experimentation on the development set. We set the maximum output length during, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: inference to input length +, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  50, Font: CMR10, Size: 9.962599754333496
+Text: , but terminate early when possible [38]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Table 2 summarizes our results and compares our translation quality and training costs to other model, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: architectures from the literature. We estimate the number of floating point operations used to train a, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: model by multiplying the training time, the number of GPUs used, and an estimate of the sustained, Font: NimbusRomNo9L-Regu, Size: 9.982504844665527
+Text: single-precision floating-point capacity of each GPU, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  , Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: 5, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 6.2, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Model Variations, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: To evaluate the importance of different components of the Transformer, we varied our base model, Font: NimbusRomNo9L-Regu, Size: 10.056798934936523
+Text: in different ways, measuring the change in performance on English-to-German translation on the, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 5, Font: NimbusRomNo9L-Regu, Size: 5.97760009765625
+Text: We used values of 2.8, 3.7, 6.0 and 9.5 TFLOPS for K80, K40, M40 and P100, respectively., Font: NimbusRomNo9L-Regu, Size: 8.966400146484375
+Text: 8, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Table 3: Variations on the Transformer architecture. Unlisted values are identical to those of the base, Font: NimbusRomNo9L-Regu, Size: 9.882577896118164
+Text: model. All metrics are on the English-to-German translation development set, newstest2013. Listed, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text: perplexities are per-wordpiece, according to our byte-pair encoding, and should not be compared to, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: per-word perplexities., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: N, Font: CMMI10, Size: 9.962599754333496
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: ff, Font: NimbusRomNo9L-Regu, Size: 6.973800182342529
+Text: h, Font: CMMI10, Size: 9.962599754333496
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text: d, Font: CMMI10, Size: 9.962599754333496
+Text: v, Font: CMMI7, Size: 6.973800182342529
+Text: P, Font: CMMI10, Size: 9.962599754333496
+Text: drop, Font: CMMI7, Size: 6.973800182342529
+Text: ϵ, Font: CMMI10, Size: 9.962599754333496
+Text: ls, Font: CMMI7, Size: 6.973800182342529
+Text: train, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: PPL, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: BLEU, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: params, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: steps, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (dev), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (dev), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ×, Font: CMSY10, Size: 9.962599754333496
+Text: 10, Font: CMR10, Size: 9.962599754333496
+Text: 6, Font: CMR7, Size: 6.973800182342529
+Text: base, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 6, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 512, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 2048, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 8, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 64, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 64, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 100K, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.92, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.8, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 65, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (A), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 512, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 512, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.29, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 24.9, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 128, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 128, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.00, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.91, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.8, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.01, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (B), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 58, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.01, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 60, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (C), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 6.11, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 23.7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 36, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.19, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 50, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 8, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.88, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 80, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 256, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 32, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.75, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 24.5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 28, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1024, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 128, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 128, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.66, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 26.0, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 168, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1024, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.12, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 53, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4096, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.75, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 26.2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 90, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (D), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.0, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.77, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 24.6, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.95, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.5, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.0, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.67, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.2, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 5.47, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: (E), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: positional embedding instead of sinusoids, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.92, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 25.7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: big, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 6, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 1024, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4096, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 16, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 0.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 300K, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 4.33, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: 26.4, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: 213, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: development set, newstest2013. We used beam search as described in the previous section, but no, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: checkpoint averaging. We present these results in Table 3., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In Table 3 rows (A), we vary the number of attention heads and the attention key and value dimensions,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: keeping the amount of computation constant, as described in Section 3.2.2. While single-head, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: attention is 0.9 BLEU worse than the best setting, quality also drops off with too many heads., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In Table 3 rows (B), we observe that reducing the attention key size, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: k, Font: CMMI7, Size: 6.973800182342529
+Text:  hurts model quality. This, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: suggests that determining compatibility is not easy and that a more sophisticated compatibility, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: function than dot product may be beneficial. We further observe in rows (C) and (D) that, as expected,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: bigger models are better, and dropout is very helpful in avoiding over-fitting. In row (E) we replace our, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: sinusoidal positional encoding with learned positional embeddings [, Font: NimbusRomNo9L-Regu, Size: 9.952631950378418
+Text: 9, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], and observe nearly identical, Font: NimbusRomNo9L-Regu, Size: 9.952631950378418
+Text: results to the base model., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 6.3, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: English Constituency Parsing, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: To evaluate if the Transformer can generalize to other tasks we performed experiments on English, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: constituency parsing. This task presents specific challenges: the output is subject to strong structural, Font: NimbusRomNo9L-Regu, Size: 9.90765380859375
+Text: constraints and is significantly longer than the input. Furthermore, RNN sequence-to-sequence, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: models have not been able to attain state-of-the-art results in small-data regimes [37]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: We trained a 4-layer transformer with, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  d, Font: CMMI10, Size: 9.962599754333496
+Text: model, Font: CMMI7, Size: 6.973800182342529
+Text:  = 1024, Font: CMR10, Size: 9.962599754333496
+Text:  on the Wall Street Journal (WSJ) portion of the, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: Penn Treebank [, Font: NimbusRomNo9L-Regu, Size: 10.051863670349121
+Text: 25, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], about 40K training sentences. We also trained it in a semi-supervised setting,, Font: NimbusRomNo9L-Regu, Size: 10.051863670349121
+Text: using the larger high-confidence and BerkleyParser corpora from with approximately 17M sentences, Font: NimbusRomNo9L-Regu, Size: 9.89763069152832
+Text: [, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: 37, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ]. We used a vocabulary of 16K tokens for the WSJ only setting and a vocabulary of 32K tokens, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: for the semi-supervised setting., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: We performed only a small number of experiments to select the dropout, both attention and residual, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: (section 5.4), learning rates and beam size on the Section 22 development set, all other parameters, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: remained unchanged from the English-to-German base translation model. During inference, we, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 9, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Table 4: The Transformer generalizes well to English constituency parsing (Results are on Section 23, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: of WSJ), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Parser, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Training, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: WSJ 23 F1, Font: NimbusRomNo9L-Medi, Size: 9.962599754333496
+Text: Vinyals & Kaiser el al. (2014) [37], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: WSJ only, discriminative, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 88.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Petrov et al. (2006) [29], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: WSJ only, discriminative, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 90.4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Zhu et al. (2013) [40], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: WSJ only, discriminative, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 90.4, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Dyer et al. (2016) [8], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: WSJ only, discriminative, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 91.7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Transformer (4 layers), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: WSJ only, discriminative, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 91.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Zhu et al. (2013) [40], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: semi-supervised, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 91.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Huang & Harper (2009) [14], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: semi-supervised, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 91.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: McClosky et al. (2006) [26], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: semi-supervised, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 92.1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Vinyals & Kaiser el al. (2014) [37], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: semi-supervised, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 92.1, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Transformer (4 layers), Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: semi-supervised, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 92.7, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Luong et al. (2015) [23], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: multi-task, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 93.0, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Dyer et al. (2016) [8], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: generative, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 93.3, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: increased the maximum output length to input length +, Font: NimbusRomNo9L-Regu, Size: 9.89763069152832
+Text:  300, Font: CMR10, Size: 9.962599754333496
+Text: . We used a beam size of, Font: NimbusRomNo9L-Regu, Size: 9.89763069152832
+Text:  21, Font: CMR10, Size: 9.962599754333496
+Text:  and, Font: NimbusRomNo9L-Regu, Size: 9.89763069152832
+Text:  α, Font: CMMI10, Size: 9.962599754333496
+Text:  = 0, Font: CMR10, Size: 9.962599754333496
+Text: ., Font: CMMI10, Size: 9.962599754333496
+Text: 3, Font: CMR10, Size: 9.962599754333496
+Text: for both WSJ only and the semi-supervised setting., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Our results in Table 4 show that despite the lack of task-specific tuning our model performs sur-, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: prisingly well, yielding better results than all previously reported models with the exception of the, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text: Recurrent Neural Network Grammar [8]., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: In contrast to RNN sequence-to-sequence models [, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text: 37, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: ], the Transformer outperforms the Berkeley-, Font: NimbusRomNo9L-Regu, Size: 10.032095909118652
+Text: Parser [29] even when training only on the WSJ training set of 40K sentences., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 7, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Conclusion, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: In this work, we presented the Transformer, the first sequence transduction model based entirely on, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text: attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: multi-headed self-attention., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: For translation tasks, the Transformer can be trained significantly faster than architectures based, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: on recurrent or convolutional layers. On both WMT 2014 English-to-German and WMT 2014, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: English-to-French translation tasks, we achieve a new state of the art. In the former task our best, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: model outperforms even all previously reported ensembles., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: We are excited about the future of attention-based models and plan to apply them to other tasks. We, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text: plan to extend the Transformer to problems involving input and output modalities other than text and, Font: NimbusRomNo9L-Regu, Size: 9.887598037719727
+Text: to investigate local, restricted attention mechanisms to efficiently handle large inputs and outputs, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: such as images, audio and video. Making generation less sequential is another research goals of ours., Font: NimbusRomNo9L-Regu, Size: 9.882577896118164
+Text: The code we used to train and evaluate our models is available at, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  https://github.com/, Font: SFTT1000, Size: 9.962599754333496
+Text: tensorflow/tensor2tensor, Font: SFTT1000, Size: 9.962599754333496
+Text: ., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Acknowledgements, Font: NimbusRomNo9L-Medi, Size: 10.061732292175293
+Text: We are grateful to Nal Kalchbrenner and Stephan Gouws for their fruitful, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: comments, corrections and inspiration., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: References, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: [1], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hinton. Layer normalization., Font: NimbusRomNo9L-Regu, Size: 9.89261531829834
+Text:  arXiv preprint, Font: NimbusRomNo9L-ReguItal, Size: 9.89261531829834
+Text: arXiv:1607.06450, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [2], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. Neural machine translation by jointly, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: learning to align and translate., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  CoRR, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , abs/1409.0473, 2014., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [3], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Denny Britz, Anna Goldie, Minh-Thang Luong, and Quoc V. Le. Massive exploration of neural, Font: NimbusRomNo9L-Regu, Size: 9.867501258850098
+Text: machine translation architectures., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  CoRR, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , abs/1703.03906, 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [4], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Jianpeng Cheng, Li Dong, and Mirella Lapata. Long short-term memory-networks for machine, Font: NimbusRomNo9L-Regu, Size: 9.882577896118164
+Text: reading., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1601.06733, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 10, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [5], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Fethi Bougares, Holger Schwenk,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: and Yoshua Bengio. Learning phrase representations using rnn encoder-decoder for statistical, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text: machine translation., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  CoRR, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , abs/1406.1078, 2014., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [6], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Francois Chollet. Xception: Deep learning with depthwise separable convolutions., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  arXiv, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: preprint arXiv:1610.02357, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [7], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Junyoung Chung, Çaglar Gülçehre, Kyunghyun Cho, and Yoshua Bengio. Empirical evaluation, Font: NimbusRomNo9L-Regu, Size: 9.877554893493652
+Text: of gated recurrent neural networks on sequence modeling., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  CoRR, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , abs/1412.3555, 2014., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [8], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah A. Smith. Recurrent neural, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: network grammars. In, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Proc. of NAACL, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [9], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, and Yann N. Dauphin. Convolu-, Font: NimbusRomNo9L-Regu, Size: 10.022196769714355
+Text: tional sequence to sequence learning., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1705.03122v2, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [10], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Alex Graves., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: Generating sequences with recurrent neural networks., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: arXiv preprint, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: arXiv:1308.0850, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2013., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [11], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for im-, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: age recognition. In, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  Proceedings of the IEEE Conference on Computer Vision and Pattern, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: Recognition, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , pages 770–778, 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [12], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Sepp Hochreiter, Yoshua Bengio, Paolo Frasconi, and Jürgen Schmidhuber. Gradient flow in, Font: NimbusRomNo9L-Regu, Size: 10.041984558105469
+Text: recurrent nets: the difficulty of learning long-term dependencies, 2001., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [13], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Sepp Hochreiter and Jürgen Schmidhuber. Long short-term memory., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  Neural computation, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 9(8):1735–1780, 1997., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [14], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Zhongqiang Huang and Mary Harper. Self-training PCFG grammars with latent annotations, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: across languages. In, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  Proceedings of the 2009 Conference on Empirical Methods in Natural, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: Language Processing, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , pages 832–841. ACL, August 2009., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [15], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Rafal Jozefowicz, Oriol Vinyals, Mike Schuster, Noam Shazeer, and Yonghui Wu. Exploring, Font: NimbusRomNo9L-Regu, Size: 10.022196769714355
+Text: the limits of language modeling., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1602.02410, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [16], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Łukasz Kaiser and Samy Bengio. Can active memory replace attention? In, Font: NimbusRomNo9L-Regu, Size: 9.872529029846191
+Text:  Advances in Neural, Font: NimbusRomNo9L-ReguItal, Size: 9.872529029846191
+Text: Information Processing Systems, (NIPS), Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [17], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Łukasz Kaiser and Ilya Sutskever. Neural GPUs learn algorithms. In, Font: NimbusRomNo9L-Regu, Size: 9.92266845703125
+Text:  International Conference, Font: NimbusRomNo9L-ReguItal, Size: 9.92266845703125
+Text: on Learning Representations (ICLR), Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [18], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Nal Kalchbrenner, Lasse Espeholt, Karen Simonyan, Aaron van den Oord, Alex Graves, and Ko-, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: ray Kavukcuoglu. Neural machine translation in linear time., Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  arXiv preprint arXiv:1610.10099v2, Font: NimbusRomNo9L-ReguItal, Size: 9.862470626831055
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [19], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Yoon Kim, Carl Denton, Luong Hoang, and Alexander M. Rush. Structured attention networks., Font: NimbusRomNo9L-Regu, Size: 9.882577896118164
+Text: In, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  International Conference on Learning Representations, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [20], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Diederik Kingma and Jimmy Ba. Adam: A method for stochastic optimization. In, Font: NimbusRomNo9L-Regu, Size: 9.90765380859375
+Text:  ICLR, Font: NimbusRomNo9L-ReguItal, Size: 9.90765380859375
+Text: , 2015., Font: NimbusRomNo9L-Regu, Size: 9.90765380859375
+Text: [21], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Oleksii Kuchaiev and Boris Ginsburg. Factorization tricks for LSTM networks., Font: NimbusRomNo9L-Regu, Size: 9.9176664352417
+Text:  arXiv preprint, Font: NimbusRomNo9L-ReguItal, Size: 9.9176664352417
+Text: arXiv:1703.10722, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [22], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Zhouhan Lin, Minwei Feng, Cicero Nogueira dos Santos, Mo Yu, Bing Xiang, Bowen, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: Zhou, and Yoshua Bengio. A structured self-attentive sentence embedding., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  arXiv preprint, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: arXiv:1703.03130, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [23], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Minh-Thang Luong, Quoc V. Le, Ilya Sutskever, Oriol Vinyals, and Lukasz Kaiser. Multi-task, Font: NimbusRomNo9L-Regu, Size: 9.947644233703613
+Text: sequence to sequence learning., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1511.06114, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2015., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [24], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Minh-Thang Luong, Hieu Pham, and Christopher D Manning. Effective approaches to attention-, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: based neural machine translation., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1508.04025, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2015., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 11, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [25], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Mitchell P Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. Building a large annotated, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: corpus of english: The penn treebank., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Computational linguistics, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 19(2):313–330, 1993., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [26], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  David McClosky, Eugene Charniak, and Mark Johnson. Effective self-training for parsing. In, Font: NimbusRomNo9L-Regu, Size: 9.977532386779785
+Text: Proceedings of the Human Language Technology Conference of the NAACL, Main Conference, Font: NimbusRomNo9L-ReguItal, Size: 9.927669525146484
+Text: ,, Font: NimbusRomNo9L-Regu, Size: 9.927669525146484
+Text: pages 152–159. ACL, June 2006., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [27], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Ankur Parikh, Oscar Täckström, Dipanjan Das, and Jakob Uszkoreit. A decomposable attention, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: model. In, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Empirical Methods in Natural Language Processing, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [28], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Romain Paulus, Caiming Xiong, and Richard Socher. A deep reinforced model for abstractive, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: summarization., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1705.04304, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [29], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Slav Petrov, Leon Barrett, Romain Thibaux, and Dan Klein. Learning accurate, compact,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: and interpretable tree annotation. In, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  Proceedings of the 21st International Conference on, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: Computational Linguistics and 44th Annual Meeting of the ACL, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: , pages 433–440. ACL, July, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: 2006., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [30], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Ofir Press and Lior Wolf. Using the output embedding to improve language models., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text:  arXiv, Font: NimbusRomNo9L-ReguItal, Size: 10.061732292175293
+Text: preprint arXiv:1608.05859, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [31], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Rico Sennrich, Barry Haddow, and Alexandra Birch. Neural machine translation of rare words, Font: NimbusRomNo9L-Regu, Size: 9.92266845703125
+Text: with subword units., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1508.07909, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2015., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [32], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le, Geoffrey Hinton,, Font: NimbusRomNo9L-Regu, Size: 9.902643203735352
+Text: and Jeff Dean. Outrageously large neural networks: The sparsely-gated mixture-of-experts, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: layer., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  arXiv preprint arXiv:1701.06538, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2017., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [33], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Nitish Srivastava, Geoffrey E Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan Salakhutdi-, Font: NimbusRomNo9L-Regu, Size: 9.942654609680176
+Text: nov. Dropout: a simple way to prevent neural networks from overfitting., Font: NimbusRomNo9L-Regu, Size: 10.02714729309082
+Text:  Journal of Machine, Font: NimbusRomNo9L-ReguItal, Size: 10.02714729309082
+Text: Learning Research, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 15(1):1929–1958, 2014., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [34], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Sainbayar Sukhbaatar, Arthur Szlam, Jason Weston, and Rob Fergus. End-to-end memory, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: networks. In C. Cortes, N. D. Lawrence, D. D. Lee, M. Sugiyama, and R. Garnett, editors,, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: Advances in Neural Information Processing Systems 28, Font: NimbusRomNo9L-ReguItal, Size: 9.95761775970459
+Text: , pages 2440–2448. Curran Associates,, Font: NimbusRomNo9L-Regu, Size: 9.95761775970459
+Text: Inc., 2015., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [35], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Ilya Sutskever, Oriol Vinyals, and Quoc VV Le. Sequence to sequence learning with neural, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: networks. In, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Advances in Neural Information Processing Systems, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , pages 3104–3112, 2014., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [36], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, and Zbigniew Wojna., Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: Rethinking the inception architecture for computer vision., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  CoRR, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , abs/1512.00567, 2015., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [37], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Vinyals & Kaiser, Koo, Petrov, Sutskever, and Hinton. Grammar as a foreign language. In, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: Advances in Neural Information Processing Systems, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2015., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [38], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc V Le, Mohammad Norouzi, Wolfgang, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. Google’s neural machine, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: translation system: Bridging the gap between human and machine translation., Font: NimbusRomNo9L-Regu, Size: 10.012289047241211
+Text:  arXiv preprint, Font: NimbusRomNo9L-ReguItal, Size: 10.012289047241211
+Text: arXiv:1609.08144, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [39], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Jie Zhou, Ying Cao, Xuguang Wang, Peng Li, and Wei Xu. Deep recurrent models with, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: fast-forward connections for neural machine translation., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  CoRR, Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , abs/1606.04199, 2016., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: [40], Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text:  Muhua Zhu, Yue Zhang, Wenliang Chen, Min Zhang, and Jingbo Zhu. Fast and accurate, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: shift-reduce constituent parsing. In, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text:  Proceedings of the 51st Annual Meeting of the ACL (Volume, Font: NimbusRomNo9L-ReguItal, Size: 9.862470626831055
+Text: 1: Long Papers), Font: NimbusRomNo9L-ReguItal, Size: 9.962599754333496
+Text: , pages 434–443. ACL, August 2013., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 12, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Attention Visualizations, Font: NimbusRomNo9L-Medi, Size: 11.9552001953125
+Text: Input-Input Layer5, Font: Arial-BoldMT, Size: 16.335596084594727
+Text: It, Font: ArialMT, Size: 7.778810977935791
+Text: is, Font: ArialMT, Size: 7.778810977935791
+Text: in, Font: ArialMT, Size: 7.778810977935791
+Text: this, Font: ArialMT, Size: 7.778810977935791
+Text: spirit, Font: ArialMT, Size: 7.778810977935791
+Text: that, Font: ArialMT, Size: 7.778810977935791
+Text: a, Font: ArialMT, Size: 7.778810977935791
+Text: majority, Font: ArialMT, Size: 7.778810977935791
+Text: of, Font: ArialMT, Size: 7.778810977935791
+Text: American, Font: ArialMT, Size: 7.778810977935791
+Text: governments, Font: ArialMT, Size: 7.778810977935791
+Text: have, Font: ArialMT, Size: 7.778810977935791
+Text: passed, Font: ArialMT, Size: 7.778810977935791
+Text: new, Font: ArialMT, Size: 7.778810977935791
+Text: laws, Font: ArialMT, Size: 7.778810977935791
+Text: since, Font: ArialMT, Size: 7.778810977935791
+Text: 2009, Font: ArialMT, Size: 7.778810977935791
+Text: making, Font: ArialMT, Size: 7.778810977935791
+Text: the, Font: ArialMT, Size: 7.778810977935791
+Text: registration, Font: ArialMT, Size: 7.778810977935791
+Text: or, Font: ArialMT, Size: 7.778810977935791
+Text: voting, Font: ArialMT, Size: 7.778810977935791
+Text: process, Font: ArialMT, Size: 7.778810977935791
+Text: more, Font: ArialMT, Size: 7.778810977935791
+Text: difficult, Font: ArialMT, Size: 7.778810977935791
+Text: ., Font: ArialMT, Size: 7.778810977935791
+Text: <EOS>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: It, Font: ArialMT, Size: 7.778810977935791
+Text: is, Font: ArialMT, Size: 7.778810977935791
+Text: in, Font: ArialMT, Size: 7.778810977935791
+Text: this, Font: ArialMT, Size: 7.778810977935791
+Text: spirit, Font: ArialMT, Size: 7.778810977935791
+Text: that, Font: ArialMT, Size: 7.778810977935791
+Text: a, Font: ArialMT, Size: 7.778810977935791
+Text: majority, Font: ArialMT, Size: 7.778810977935791
+Text: of, Font: ArialMT, Size: 7.778810977935791
+Text: American, Font: ArialMT, Size: 7.778810977935791
+Text: governments, Font: ArialMT, Size: 7.778810977935791
+Text: have, Font: ArialMT, Size: 7.778810977935791
+Text: passed, Font: ArialMT, Size: 7.778810977935791
+Text: new, Font: ArialMT, Size: 7.778810977935791
+Text: laws, Font: ArialMT, Size: 7.778810977935791
+Text: since, Font: ArialMT, Size: 7.778810977935791
+Text: 2009, Font: ArialMT, Size: 7.778810977935791
+Text: making, Font: ArialMT, Size: 7.778810977935791
+Text: the, Font: ArialMT, Size: 7.778810977935791
+Text: registration, Font: ArialMT, Size: 7.778810977935791
+Text: or, Font: ArialMT, Size: 7.778810977935791
+Text: voting, Font: ArialMT, Size: 7.778810977935791
+Text: process, Font: ArialMT, Size: 7.778810977935791
+Text: more, Font: ArialMT, Size: 7.778810977935791
+Text: difficult, Font: ArialMT, Size: 7.778810977935791
+Text: ., Font: ArialMT, Size: 7.778810977935791
+Text: <EOS>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: <pad>, Font: ArialMT, Size: 7.778810977935791
+Text: Figure 3: An example of the attention mechanism following long-distance dependencies in the, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: encoder self-attention in layer 5 of 6. Many of the attention heads attend to a distant dependency of, Font: NimbusRomNo9L-Regu, Size: 9.972557067871094
+Text: the verb ‘making’, completing the phrase ‘making...more difficult’. Attentions here shown only for, Font: NimbusRomNo9L-Regu, Size: 9.987475395202637
+Text: the word ‘making’. Different colors represent different heads. Best viewed in color., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 13, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Input-Input Layer5, Font: Arial-BoldMT, Size: 19.567136764526367
+Text: The, Font: ArialMT, Size: 9.317630767822266
+Text: Law, Font: ArialMT, Size: 9.317630767822266
+Text: will, Font: ArialMT, Size: 9.317630767822266
+Text: never, Font: ArialMT, Size: 9.317630767822266
+Text: be, Font: ArialMT, Size: 9.317630767822266
+Text: perfect, Font: ArialMT, Size: 9.317630767822266
+Text: ,, Font: ArialMT, Size: 9.317630767822266
+Text: but, Font: ArialMT, Size: 9.317630767822266
+Text: its, Font: ArialMT, Size: 9.317630767822266
+Text: application, Font: ArialMT, Size: 9.317630767822266
+Text: should, Font: ArialMT, Size: 9.317630767822266
+Text: be, Font: ArialMT, Size: 9.317630767822266
+Text: just, Font: ArialMT, Size: 9.317630767822266
+Text: -, Font: ArialMT, Size: 9.317630767822266
+Text: this, Font: ArialMT, Size: 9.317630767822266
+Text: is, Font: ArialMT, Size: 9.317630767822266
+Text: what, Font: ArialMT, Size: 9.317630767822266
+Text: we, Font: ArialMT, Size: 9.317630767822266
+Text: are, Font: ArialMT, Size: 9.317630767822266
+Text: missing, Font: ArialMT, Size: 9.317630767822266
+Text: ,, Font: ArialMT, Size: 9.317630767822266
+Text: in, Font: ArialMT, Size: 9.317630767822266
+Text: my, Font: ArialMT, Size: 9.317630767822266
+Text: opinion, Font: ArialMT, Size: 9.317630767822266
+Text: ., Font: ArialMT, Size: 9.317630767822266
+Text: <EOS>, Font: ArialMT, Size: 9.317630767822266
+Text: <pad>, Font: ArialMT, Size: 9.317630767822266
+Text: The, Font: ArialMT, Size: 9.317630767822266
+Text: Law, Font: ArialMT, Size: 9.317630767822266
+Text: will, Font: ArialMT, Size: 9.317630767822266
+Text: never, Font: ArialMT, Size: 9.317630767822266
+Text: be, Font: ArialMT, Size: 9.317630767822266
+Text: perfect, Font: ArialMT, Size: 9.317630767822266
+Text: ,, Font: ArialMT, Size: 9.317630767822266
+Text: but, Font: ArialMT, Size: 9.317630767822266
+Text: its, Font: ArialMT, Size: 9.317630767822266
+Text: application, Font: ArialMT, Size: 9.317630767822266
+Text: should, Font: ArialMT, Size: 9.317630767822266
+Text: be, Font: ArialMT, Size: 9.317630767822266
+Text: just, Font: ArialMT, Size: 9.317630767822266
+Text: -, Font: ArialMT, Size: 9.317630767822266
+Text: this, Font: ArialMT, Size: 9.317630767822266
+Text: is, Font: ArialMT, Size: 9.317630767822266
+Text: what, Font: ArialMT, Size: 9.317630767822266
+Text: we, Font: ArialMT, Size: 9.317630767822266
+Text: are, Font: ArialMT, Size: 9.317630767822266
+Text: missing, Font: ArialMT, Size: 9.317630767822266
+Text: ,, Font: ArialMT, Size: 9.317630767822266
+Text: in, Font: ArialMT, Size: 9.317630767822266
+Text: my, Font: ArialMT, Size: 9.317630767822266
+Text: opinion, Font: ArialMT, Size: 9.317630767822266
+Text: ., Font: ArialMT, Size: 9.317630767822266
+Text: <EOS>, Font: ArialMT, Size: 9.317630767822266
+Text: <pad>, Font: ArialMT, Size: 9.317630767822266
+Text: Input-Input Layer5, Font: Arial-BoldMT, Size: 19.7869873046875
+Text: The, Font: ArialMT, Size: 9.422321319580078
+Text: Law, Font: ArialMT, Size: 9.422321319580078
+Text: will, Font: ArialMT, Size: 9.422321319580078
+Text: never, Font: ArialMT, Size: 9.422321319580078
+Text: be, Font: ArialMT, Size: 9.422321319580078
+Text: perfect, Font: ArialMT, Size: 9.422321319580078
+Text: ,, Font: ArialMT, Size: 9.422321319580078
+Text: but, Font: ArialMT, Size: 9.422321319580078
+Text: its, Font: ArialMT, Size: 9.422321319580078
+Text: application, Font: ArialMT, Size: 9.422321319580078
+Text: should, Font: ArialMT, Size: 9.422321319580078
+Text: be, Font: ArialMT, Size: 9.422321319580078
+Text: just, Font: ArialMT, Size: 9.422321319580078
+Text: -, Font: ArialMT, Size: 9.422321319580078
+Text: this, Font: ArialMT, Size: 9.422321319580078
+Text: is, Font: ArialMT, Size: 9.422321319580078
+Text: what, Font: ArialMT, Size: 9.422321319580078
+Text: we, Font: ArialMT, Size: 9.422321319580078
+Text: are, Font: ArialMT, Size: 9.422321319580078
+Text: missing, Font: ArialMT, Size: 9.422321319580078
+Text: ,, Font: ArialMT, Size: 9.422321319580078
+Text: in, Font: ArialMT, Size: 9.422321319580078
+Text: my, Font: ArialMT, Size: 9.422321319580078
+Text: opinion, Font: ArialMT, Size: 9.422321319580078
+Text: ., Font: ArialMT, Size: 9.422321319580078
+Text: <EOS>, Font: ArialMT, Size: 9.422321319580078
+Text: <pad>, Font: ArialMT, Size: 9.422321319580078
+Text: The, Font: ArialMT, Size: 9.422321319580078
+Text: Law, Font: ArialMT, Size: 9.422321319580078
+Text: will, Font: ArialMT, Size: 9.422321319580078
+Text: never, Font: ArialMT, Size: 9.422321319580078
+Text: be, Font: ArialMT, Size: 9.422321319580078
+Text: perfect, Font: ArialMT, Size: 9.422321319580078
+Text: ,, Font: ArialMT, Size: 9.422321319580078
+Text: but, Font: ArialMT, Size: 9.422321319580078
+Text: its, Font: ArialMT, Size: 9.422321319580078
+Text: application, Font: ArialMT, Size: 9.422321319580078
+Text: should, Font: ArialMT, Size: 9.422321319580078
+Text: be, Font: ArialMT, Size: 9.422321319580078
+Text: just, Font: ArialMT, Size: 9.422321319580078
+Text: -, Font: ArialMT, Size: 9.422321319580078
+Text: this, Font: ArialMT, Size: 9.422321319580078
+Text: is, Font: ArialMT, Size: 9.422321319580078
+Text: what, Font: ArialMT, Size: 9.422321319580078
+Text: we, Font: ArialMT, Size: 9.422321319580078
+Text: are, Font: ArialMT, Size: 9.422321319580078
+Text: missing, Font: ArialMT, Size: 9.422321319580078
+Text: ,, Font: ArialMT, Size: 9.422321319580078
+Text: in, Font: ArialMT, Size: 9.422321319580078
+Text: my, Font: ArialMT, Size: 9.422321319580078
+Text: opinion, Font: ArialMT, Size: 9.422321319580078
+Text: ., Font: ArialMT, Size: 9.422321319580078
+Text: <EOS>, Font: ArialMT, Size: 9.422321319580078
+Text: <pad>, Font: ArialMT, Size: 9.422321319580078
+Text: Figure 4: Two attention heads, also in layer 5 of 6, apparently involved in anaphora resolution. Top:, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Full attentions for head 5. Bottom: Isolated attentions from just the word ‘its’ for attention heads 5, Font: NimbusRomNo9L-Regu, Size: 10.002370834350586
+Text: and 6. Note that the attentions are very sharp for this word., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 14, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: Input-Input Layer5, Font: Arial-BoldMT, Size: 19.618867874145508
+Text: The, Font: ArialMT, Size: 9.342264175415039
+Text: Law, Font: ArialMT, Size: 9.342264175415039
+Text: will, Font: ArialMT, Size: 9.342264175415039
+Text: never, Font: ArialMT, Size: 9.342264175415039
+Text: be, Font: ArialMT, Size: 9.342264175415039
+Text: perfect, Font: ArialMT, Size: 9.342264175415039
+Text: ,, Font: ArialMT, Size: 9.342264175415039
+Text: but, Font: ArialMT, Size: 9.342264175415039
+Text: its, Font: ArialMT, Size: 9.342264175415039
+Text: application, Font: ArialMT, Size: 9.342264175415039
+Text: should, Font: ArialMT, Size: 9.342264175415039
+Text: be, Font: ArialMT, Size: 9.342264175415039
+Text: just, Font: ArialMT, Size: 9.342264175415039
+Text: -, Font: ArialMT, Size: 9.342264175415039
+Text: this, Font: ArialMT, Size: 9.342264175415039
+Text: is, Font: ArialMT, Size: 9.342264175415039
+Text: what, Font: ArialMT, Size: 9.342264175415039
+Text: we, Font: ArialMT, Size: 9.342264175415039
+Text: are, Font: ArialMT, Size: 9.342264175415039
+Text: missing, Font: ArialMT, Size: 9.342264175415039
+Text: ,, Font: ArialMT, Size: 9.342264175415039
+Text: in, Font: ArialMT, Size: 9.342264175415039
+Text: my, Font: ArialMT, Size: 9.342264175415039
+Text: opinion, Font: ArialMT, Size: 9.342264175415039
+Text: ., Font: ArialMT, Size: 9.342264175415039
+Text: <EOS>, Font: ArialMT, Size: 9.342264175415039
+Text: <pad>, Font: ArialMT, Size: 9.342264175415039
+Text: The, Font: ArialMT, Size: 9.342264175415039
+Text: Law, Font: ArialMT, Size: 9.342264175415039
+Text: will, Font: ArialMT, Size: 9.342264175415039
+Text: never, Font: ArialMT, Size: 9.342264175415039
+Text: be, Font: ArialMT, Size: 9.342264175415039
+Text: perfect, Font: ArialMT, Size: 9.342264175415039
+Text: ,, Font: ArialMT, Size: 9.342264175415039
+Text: but, Font: ArialMT, Size: 9.342264175415039
+Text: its, Font: ArialMT, Size: 9.342264175415039
+Text: application, Font: ArialMT, Size: 9.342264175415039
+Text: should, Font: ArialMT, Size: 9.342264175415039
+Text: be, Font: ArialMT, Size: 9.342264175415039
+Text: just, Font: ArialMT, Size: 9.342264175415039
+Text: -, Font: ArialMT, Size: 9.342264175415039
+Text: this, Font: ArialMT, Size: 9.342264175415039
+Text: is, Font: ArialMT, Size: 9.342264175415039
+Text: what, Font: ArialMT, Size: 9.342264175415039
+Text: we, Font: ArialMT, Size: 9.342264175415039
+Text: are, Font: ArialMT, Size: 9.342264175415039
+Text: missing, Font: ArialMT, Size: 9.342264175415039
+Text: ,, Font: ArialMT, Size: 9.342264175415039
+Text: in, Font: ArialMT, Size: 9.342264175415039
+Text: my, Font: ArialMT, Size: 9.342264175415039
+Text: opinion, Font: ArialMT, Size: 9.342264175415039
+Text: ., Font: ArialMT, Size: 9.342264175415039
+Text: <EOS>, Font: ArialMT, Size: 9.342264175415039
+Text: <pad>, Font: ArialMT, Size: 9.342264175415039
+Text: Input-Input Layer5, Font: Arial-BoldMT, Size: 19.62848663330078
+Text: The, Font: ArialMT, Size: 9.346844673156738
+Text: Law, Font: ArialMT, Size: 9.346844673156738
+Text: will, Font: ArialMT, Size: 9.346844673156738
+Text: never, Font: ArialMT, Size: 9.346844673156738
+Text: be, Font: ArialMT, Size: 9.346844673156738
+Text: perfect, Font: ArialMT, Size: 9.346844673156738
+Text: ,, Font: ArialMT, Size: 9.346844673156738
+Text: but, Font: ArialMT, Size: 9.346844673156738
+Text: its, Font: ArialMT, Size: 9.346844673156738
+Text: application, Font: ArialMT, Size: 9.346844673156738
+Text: should, Font: ArialMT, Size: 9.346844673156738
+Text: be, Font: ArialMT, Size: 9.346844673156738
+Text: just, Font: ArialMT, Size: 9.346844673156738
+Text: -, Font: ArialMT, Size: 9.346844673156738
+Text: this, Font: ArialMT, Size: 9.346844673156738
+Text: is, Font: ArialMT, Size: 9.346844673156738
+Text: what, Font: ArialMT, Size: 9.346844673156738
+Text: we, Font: ArialMT, Size: 9.346844673156738
+Text: are, Font: ArialMT, Size: 9.346844673156738
+Text: missing, Font: ArialMT, Size: 9.346844673156738
+Text: ,, Font: ArialMT, Size: 9.346844673156738
+Text: in, Font: ArialMT, Size: 9.346844673156738
+Text: my, Font: ArialMT, Size: 9.346844673156738
+Text: opinion, Font: ArialMT, Size: 9.346844673156738
+Text: ., Font: ArialMT, Size: 9.346844673156738
+Text: <EOS>, Font: ArialMT, Size: 9.346844673156738
+Text: <pad>, Font: ArialMT, Size: 9.346844673156738
+Text: The, Font: ArialMT, Size: 9.346844673156738
+Text: Law, Font: ArialMT, Size: 9.346844673156738
+Text: will, Font: ArialMT, Size: 9.346844673156738
+Text: never, Font: ArialMT, Size: 9.346844673156738
+Text: be, Font: ArialMT, Size: 9.346844673156738
+Text: perfect, Font: ArialMT, Size: 9.346844673156738
+Text: ,, Font: ArialMT, Size: 9.346844673156738
+Text: but, Font: ArialMT, Size: 9.346844673156738
+Text: its, Font: ArialMT, Size: 9.346844673156738
+Text: application, Font: ArialMT, Size: 9.346844673156738
+Text: should, Font: ArialMT, Size: 9.346844673156738
+Text: be, Font: ArialMT, Size: 9.346844673156738
+Text: just, Font: ArialMT, Size: 9.346844673156738
+Text: -, Font: ArialMT, Size: 9.346844673156738
+Text: this, Font: ArialMT, Size: 9.346844673156738
+Text: is, Font: ArialMT, Size: 9.346844673156738
+Text: what, Font: ArialMT, Size: 9.346844673156738
+Text: we, Font: ArialMT, Size: 9.346844673156738
+Text: are, Font: ArialMT, Size: 9.346844673156738
+Text: missing, Font: ArialMT, Size: 9.346844673156738
+Text: ,, Font: ArialMT, Size: 9.346844673156738
+Text: in, Font: ArialMT, Size: 9.346844673156738
+Text: my, Font: ArialMT, Size: 9.346844673156738
+Text: opinion, Font: ArialMT, Size: 9.346844673156738
+Text: ., Font: ArialMT, Size: 9.346844673156738
+Text: <EOS>, Font: ArialMT, Size: 9.346844673156738
+Text: <pad>, Font: ArialMT, Size: 9.346844673156738
+Text: Figure 5: Many of the attention heads exhibit behaviour that seems related to the structure of the, Font: NimbusRomNo9L-Regu, Size: 10.061732292175293
+Text: sentence. We give two such examples above, from two different heads from the encoder self-attention, Font: NimbusRomNo9L-Regu, Size: 9.862470626831055
+Text: at layer 5 of 6. The heads clearly learned to perform different tasks., Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
+Text: 15, Font: NimbusRomNo9L-Regu, Size: 9.962599754333496
