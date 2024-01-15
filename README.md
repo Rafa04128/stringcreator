@@ -41,3 +41,17 @@ Total size of the directory: 10.93 MB
 Unique characters in the text files:  , 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
 V1
 
+
+
+
+V3 HTML ENGINE
+
+new version generates HTML content directly from convertion.
+Total PDF files converted: 22
+Total time taken: 402.64 seconds
+Total size of the output directory: 2309.73 MB
+Total size of the PDF directory: 92.07 MB
+
+Generates a lot more data, and if corrected will have the perfect route.
+
+Testing..

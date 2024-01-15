@@ -59,8 +59,8 @@ def ensure_output_directory(output_directory):
         os.makedirs(output_directory)
 
 if __name__ == "__main__":
-    pdf_directory = r"C:\Users\R. García\Desktop\Projects\MrKlean\stringcreator\pdf"
-    output_directory = r"C:\Users\R. García\Desktop\Projects\MrKlean\stringcreator\new_output"
+    pdf_directory = r"C:\Users\LINES\Desktop\project\stringcreator\pdf"
+    output_directory = r"C:\Users\LINES\Desktop\project\stringcreator\new_output"
     ensure_output_directory(output_directory)
 
     pdf_files = [pdf_file for pdf_file in os.listdir(pdf_directory) if pdf_file.endswith(".pdf")]
